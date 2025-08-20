@@ -1,0 +1,41 @@
+.createProductPage {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .createProductForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .createProductForm input,
+  .createProductForm textarea {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .createProductForm button {
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .createProductForm button:hover {
+    background-color: #0056b3;
+  }
+  
+  .message {
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: green;
+  }
+  
