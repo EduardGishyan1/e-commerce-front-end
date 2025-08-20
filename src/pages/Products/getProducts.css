@@ -19,6 +19,7 @@
   justify-content: center;
   padding: 20px;
   flex: 1 1 auto;
+  margin-top: 100px;
   margin-left: 250px; /* default: sidebar expanded */
   transition: margin-left 0.3s ease;
 }
@@ -31,6 +32,7 @@
 .headerText {
   width: 100%;        /* full width of container */
   text-align: center; /* keep text centered */
+  /* position: fixed; */
   flex-basis: 100%;   /* ensures it takes a full row */
 }
 

@@ -37,14 +37,14 @@ const ProductsPage = () => {
     <div className="productsPage">
       <Sidebar sidebarWidth={sidebarWidth} setSidebarWidth={setSidebarWidth} />
       <div className="productsData">
-        <Header />
+      <Header sidebarWidth={sidebarWidth} />
 
         {/* Add inline style to dynamically adjust margin-left */}
         <div
           className="productsInfo"
           style={{ marginLeft: `${sidebarWidth}px` }}
         >
-          
+
           <h2 className="headerText">All Products</h2>
 
           {error && <p className="error">{error}</p>}

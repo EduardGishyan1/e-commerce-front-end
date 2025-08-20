@@ -64,6 +64,7 @@
   /* User info card */
   .userInfo {
     flex: 1;
+    margin-top: 100px;
     padding: 20px;
     overflow-y: auto;
     display: flex;

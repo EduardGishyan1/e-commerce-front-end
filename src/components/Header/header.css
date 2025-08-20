@@ -1,19 +1,23 @@
 .header {
+    position: fixed;  /* header stays on top */
+    top: 0;
     height: 100px;
-    background-color: #CFC0AC; /* same as sidebar */
+    background-color: #CFC0AC;
     display: flex;
     align-items: center;
     padding: 0 20px;
     box-sizing: border-box;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     justify-content: space-between;
-    margin-left: 80px;
-}
-.logout {
+    z-index: 1000;
+    transition: margin-left 0.3s ease, width 0.3s ease; /* smooth slide */
+  }
+  
+  .logout {
     display: inline-block;
     padding: 8px 16px;
-    background-color: #f5f5f5; /* light gray */
-    color: #333; /* dark text */
+    background-color: #f5f5f5;
+    color: #333;
     font-size: 14px;
     font-weight: 500;
     border-radius: 6px;
@@ -22,7 +26,7 @@
   }
   
   .logout:hover {
-    background-color: #e0e0e0; /* slightly darker gray */
+    background-color: #e0e0e0;
     color: #000;
   }
   

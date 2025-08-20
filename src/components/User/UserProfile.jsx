@@ -58,7 +58,7 @@ const UserProfile = () => {
         setSidebarWidth={setSidebarWidth}
       />
       <div className="userData">
-        <Header />
+        <Header sidebarWidth={sidebarWidth} />
         <div className="userInfo">
           {user ? (
             <div className="userCard">
