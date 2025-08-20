@@ -7,9 +7,9 @@
     box-sizing: border-box;
     overflow-y: auto;
     transition: width 0.3s ease;
-    position: relative;
+    position: fixed;
     min-height: 100vh;
-    height: auto;
+    /* height: auto; */
     overflow-x: hidden;
   }
   
@@ -85,7 +85,7 @@
   .toggleBtn {
     margin: 12px;
     padding: 6px;
-    width: 45px;
+    width: 90%;
     font-size: 25px;
     height: 40px;
     background-color: #CFC0AC;
@@ -98,7 +98,7 @@
   }
   
   .toggleBtn:hover {
-    background-color: gray;
+    background: rgba(0, 0, 0, 0.25); /* soft semi-transparent black */
     opacity: 0.8;
   }
   

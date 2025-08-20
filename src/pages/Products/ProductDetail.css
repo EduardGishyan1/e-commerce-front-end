@@ -1,0 +1,129 @@
+.productDetailPage {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    font-family: "Inter", Arial, sans-serif;
+    background: linear-gradient(135deg, #f9f9f9, #ececec);
+    min-height: 80vh;
+    transition: background 0.3s ease;
+  }
+  
+  .productDetailCard {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 8px 24px;
+    padding: 35px;
+    max-width: 900px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .productDetailCard:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 12px 30px;
+  }
+  
+  .productDetailImage {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+  
+  .productDetailImage:hover {
+    transform: scale(1.02);
+  }
+  
+  .productDetailInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 16px;
+    flex: 1;
+  }
+  
+  .productDetailName {
+    font-size: 30px;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+  
+  .productDetailPrice {
+    font-size: 22px;
+    font-weight: 600;
+    color: #555;
+  }
+  
+  .productDetailDescription {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  .productDetailCategory,
+  .productDetailStock,
+  .productDetailViews {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .addToCartBtn {
+    margin-top: 20px;
+    padding: 14px 28px;
+    background: #cfc0ac;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: fit-content;
+  }
+  
+  .addToCartBtn:hover {
+    background: #b8aa97;
+    transform: scale(1.02);
+  }
+  
+  .error {
+    color: red;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .loading {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+  }
+  
+  /* Responsive */
+  @media (max-width: 800px) {
+    .productDetailCard {
+      flex-direction: column;
+      align-items: center;
+      padding: 25px;
+      gap: 25px;
+    }
+  
+    .productDetailImage {
+      width: 100%;
+      height: auto;
+    }
+  
+    .productDetailInfo {
+      align-items: center;
+      text-align: center;
+      gap: 12px;
+    }
+  
+    .addToCartBtn {
+      width: 100%;
+    }
+  }
+  

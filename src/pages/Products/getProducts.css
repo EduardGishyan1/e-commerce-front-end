@@ -1,6 +1,5 @@
 .productsPage {
   display: flex;
-  /* height: 100vh; */
   font-family: "Inter", Arial, sans-serif;
   overflow: hidden;
 }
@@ -12,43 +11,29 @@
   min-width: 0;
 }
 
+/* Products container with responsive margin based on sidebar state */
 .productsInfo {
-  flex: 1 1 auto;
-  padding: 20px;
-  /* overflow-y: auto; */
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: flex-start;
+  justify-content: center;
+  padding: 20px;
+  flex: 1 1 auto;
+  margin-left: 250px; /* default: sidebar expanded */
+  transition: margin-left 0.3s ease;
+}
+
+/* When sidebar is collapsed */
+.productsData.sidebar-collapsed .productsInfo {
+  margin-left: 80px;
 }
 
 .headerText {
-  text-align: center;
-  padding: 15px;
+  width: 100%;        /* full width of container */
+  text-align: center; /* keep text centered */
+  flex-basis: 100%;   /* ensures it takes a full row */
 }
 
-.productCard {
-  flex: 1 1 200px;
-  min-width: 300px;
-  max-width: 350px;
-  cursor: pointer;
-  height: fit-content;
-  /* max-height: 550px; */
-  /* border: solid 2px; */
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  padding: 20px;
-  background: #ffffff;
-  height: fit-content;
-  text-align: center;
-  border-radius: 12px;
-  transition: 0.3s;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-.productCard:hover {
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
-}
 
 .pagination {
   padding: 10px;
@@ -57,12 +42,12 @@
 
 .wrapper {
   margin: auto;
+  display: flex;
   justify-content: space-around;
   align-items: center;
-  display: flex;
   gap: 10px;
   width: 400px;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   border-radius: 15px;
 }
 
@@ -76,63 +61,119 @@
   cursor: pointer;
 }
 
-.productPrice {
-  padding-top: 15px;
+/* Product card styling */
+.productCard {
+  flex: 1 1 360px;
+  min-width: 340px;
+  max-width: 380px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  background: #fff;
+  text-align: center;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 6px 16px;
+}
+
+.productCard:hover {
+  box-shadow: rgba(0, 0, 0, 0.28) 0px 12px 28px;
 }
 
 .productImage {
-  margin: auto;
   width: 100%;
-  min-height: 350px;
-  max-height: 350px;
-  object-fit: fill;
-  border-radius: 25px;
-  background: #f5f5f5; /* optional: fill empty space behind image */
+  height: 280px;
+  object-fit: cover;
+  border-radius: 16px;
+  background: #fff;
+  display: block;
+  transition: transform 0.3s ease;
 }
 
-.productCard h3 {
-  margin: 0;
+.productCard:hover .productImage {
+  transform: scale(1.02);
+}
+
+.productPrice {
   font-size: 20px;
-  font-weight: 600;
-  color: #111827;
+  font-weight: 700;
+  color: #555;
+  margin: 6px 0;
 }
 
-.productCard p {
-  margin: 8px 0;
-  font-size: 1.1rem;
-  color: #4a4a4a;
+.productName {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+  margin: 4px 0;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.productCard strong {
-  color: #2c3e50;
+.productCategory {
+  font-size: 16px;
+  color: #555;
+  margin: 2px 0;
 }
-.cartBtn {
-  height: 40px;
-  border-radius: 15px;
-  width: 80%;
-  margin: auto;
-  border: solid 1px;
-  justify-content: center;
-  align-items: center;
+
+.productStats {
   display: flex;
-  text-decoration: none;
-  color: white;
-  font-size: 17px;
-  background: #CFC0AC;
-  transition: 0.5s;
-  cursor: pointer;
-}
-.cartBtn:hover {
-  transform: scale(1.05);
+  gap: 8px;
+  margin-top: 6px;
 }
 
+.statBadge {
+  background: #f0f0f0;
+  color: #333;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.statBadge strong {
+  font-weight: 600;
+}
+
+.cartBtn {
+  width: 300px;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #CFC0AC;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.cartBtn:hover {
+  transform: scale(0.98);
+}
+
+.cartBtn:active {
+  transform: scale(0.9);
+}
+
+/* Responsive adjustments for small screens */
 @media (max-width: 600px) {
   .productCard {
     padding: 16px;
   }
+
   .productCard h3 {
     font-size: 18px;
   }
+
   .productCard p {
     font-size: 1rem;
   }

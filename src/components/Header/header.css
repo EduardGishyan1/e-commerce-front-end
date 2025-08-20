@@ -7,4 +7,26 @@
     box-sizing: border-box;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     justify-content: space-between;
+    margin-left: 80px;
 }
+.logout {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #f5f5f5; /* light gray */
+    color: #333; /* dark text */
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  
+  .logout:hover {
+    background-color: #e0e0e0; /* slightly darker gray */
+    color: #000;
+  }
+  
+  .logout:active {
+    background-color: #d6d6d6;
+  }
+  

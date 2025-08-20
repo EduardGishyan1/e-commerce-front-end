@@ -4,7 +4,7 @@ const Header = ({ placeholder = "Search..." }) => {
   return (
     <div className="header">
       <h1>Contect</h1>
-      <a href="/logout">logout</a>
+      <a className="logout" href="/logout">logout</a>
     </div>
   );
 };
