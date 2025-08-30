@@ -6,6 +6,7 @@ import CreateProduct from './pages/Products/Products';
 import ProductsPage from "./pages/Products/GetProducts";
 import ProductDetailPage from "./pages/Products/productDetailPage";
 import Logout from './pages/Login/Logout';
+import WishlistPage from './pages/WishList/Wishlist';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path='/products' element={<ProductsPage />}/>
         <Route path='/products/:id' element={<ProductDetailPage />}/>
         <Route path='/logout' element={<Logout />}/>
+        <Route path='/wishlist' element={<WishlistPage />} />
       </Routes>
     </Router>
   );

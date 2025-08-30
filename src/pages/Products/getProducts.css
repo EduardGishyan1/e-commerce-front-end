@@ -42,6 +42,88 @@
   margin: auto;
 }
 
+/* Make the media area contain the floating button */
+.productMedia{
+  position: relative;
+  aspect-ratio: 16/11;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #eee;
+}
+
+/* Floating heart button */
+.wishlistFab{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,.9);
+  color: #e11d48;                  /* rose-600 */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0,0,0,.15);
+  backdrop-filter: blur(4px);
+  transition: background .2s ease, color .2s ease, transform .06s ease, box-shadow .2s ease;
+  z-index: 2;
+}
+.wishlistFab:hover{
+  background: #e11d48;
+  color: #fff;
+  box-shadow: 0 8px 22px rgba(225, 29, 72, .35);
+}
+.wishlistFab:active{ transform: scale(.94); }
+.wishlistFab:focus-visible{
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(225,29,72,.35);
+}
+
+/* Optional “saved” state (toggle this class when item is in wishlist) */
+.wishlistFab.is-active{
+  background: #e11d48;
+  color: #fff;
+}
+
+/* Keep Add to cart as a single wide bar */
+.productActions{ margin-top: 12px; }
+.cartBtn{
+  width: 100%;
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  background: #cfc0ac;            /* your beige primary */
+  transition: background .2s ease, transform .06s ease;
+}
+.cartBtn:hover{ background: #bea98f; }
+.cartBtn:active{ transform: translateY(1px); }
+
+.productMedia{
+  position: relative;
+  width: 100%;
+  min-height: clamp(180px, 30vw, 260px); /* floor only, not fixed */
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.productMedia .productImage{
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;                /* crops wide images nicely */
+  display: block;
+}
+
+
 .wrapper {
   margin: auto;
   display: flex;

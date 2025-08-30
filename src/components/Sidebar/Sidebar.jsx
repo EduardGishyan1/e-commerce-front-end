@@ -31,6 +31,9 @@ const Sidebar = ({ user, sidebarWidth, setSidebarWidth }) => {
         <a href="#" className="icon">
           <div className="pageInfo"> <i class="fa-solid fa-boxes-stacked"></i> <p className="textLabel">Orders</p></div>
         </a>
+        <a href="/wishlist" className="icon">
+        <div className="pageInfo"><i class="fa-solid fa-clipboard-list"></i> <p className="textLabel">Wishlist</p></div>
+        </a>
         <a href="/products" className="icon">
           <div className="pageInfo"> <i class="fa-solid fa-cart-shopping"></i> <p className="textLabel">Products</p></div>
         </a>
